@@ -1,0 +1,22 @@
+[project]
+name = "openbikecontrol-server"
+version = "0.1.0"
+description = "Standalone OpenBikeControl server for Zwift Click V2 → MyWhoosh bridge"
+readme = "README.md"
+authors = [
+    { name = "BikeControl Team" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "bleak>=3.1.0",
+    "cryptography>=44.0.0",
+    "zeroconf>=0.136.0",
+]
+
+[project.scripts]
+openbikecontrol-server = "openbikecontrol_server:main"
+
+[build-system]
+requires = ["uv_build>=0.13.5,<0.14.0"]
+build-backend = "uv_build"
+
